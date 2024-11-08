@@ -1,0 +1,59 @@
+# This game was created by: Nikko Ruiz
+import pygame
+import random
+import math
+
+# Initialize Pygame
+pygame.init()
+
+# Constants
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GREEN = (0, 255, 0)
+GOAL_WIDTH = 200
+GOAL_HEIGHT = 20
+GOALIE_WIDTH = 40
+GOALIE_HEIGHT = 60
+BALL_RADIUS = 20
+CHARGE_MAX = 15  
+# Max charge for the kick
+
+# Initialize Pygame and Set Up Constants:
+# Screenwidth and screenheight define the size of the game window.
+# White, black, and green are the values used for colors.
+# Goalwidth and Goalheight define the size of the goal.
+# Goaliewidth and Goalieheight define the size of the moving goalie.
+# Ballradius defines the size of the soccer ball (a circle).
+# Chargemax is the maximum charge level for how strong a kick can be.
+
+# Set up display
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption("Soccer Game with Kick Charge and Goalie")
+
+# Ball settings
+ball_x = SCREEN_WIDTH // 2
+ball_y = SCREEN_HEIGHT - 80
+ball_speed_x = 0
+ball_speed_y = 0
+ball_in_motion = False
+
+# Goal settings
+goal_x = SCREEN_WIDTH // 2 - GOAL_WIDTH // 2
+goal_y = 30
+
+# Goalie settings
+goalie_x = goal_x + GOAL_WIDTH // 2 - GOALIE_WIDTH // 2
+goalie_y = goal_y + GOAL_HEIGHT
+goalie_speed = 4
+goalie_direction = 1  # 1 = right, -1 = left
+
+# Score
+
+
+# Charge settings
+# Game loop
+running = True
+clock = pygame.time.Clock()
+# all i have to do is make a the ball go fast or slow; and the goal
